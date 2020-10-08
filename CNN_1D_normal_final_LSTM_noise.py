@@ -311,8 +311,7 @@ for iNoise in range(nNoise):
                             np.savetxt(save_folder_final + '/temp_f1_score_class.csv', temp_f1_score_class, delimiter=',');
                             np.savetxt(save_folder_final + '/confusion_matrix.csv', temp_cm, delimiter=',');
                             np.savetxt(save_folder_final + '/predict_label.csv', predict_label_test, delimiter=',')
-                            
-            
+                                        
                             # plot the accuracy
                             plt.plot(history.history['acc'])
                             plt.plot(history.history['val_acc'])
