@@ -154,9 +154,7 @@ for iNoise in range(nNoise):
         
                         # normalization
                         scaler = preprocessing.StandardScaler().fit(train_feat)
-                        train_feat = scaler.transform(train_feat)
-                        
-                        scaler = preprocessing.StandardScaler().fit(test_feature)                
+                        train_feat = scaler.transform(train_feat)                      
                         test_feature = scaler.transform(test_feature)    
                         
                         # split train into training and validatiaon 
