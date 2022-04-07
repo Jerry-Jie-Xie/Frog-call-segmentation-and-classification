@@ -175,9 +175,10 @@ for iType in range(nType):
                     testLabel = np.ravel(testData[:,-1:])
                 
                 #===========================#
-                training_feat = StandardScaler().fit_transform(training_feat)
-                validation_feat = StandardScaler().fit_transform(validation_feat)            
-                testFeature = StandardScaler().fit_transform(testFeature)
+                std_scaler = StandardScaler(copy=False).fit(training_feat)
+                training_feat = std_scaler.transform(training_feat)
+                validation_feat = std_scaler.transform(validation_feat)
+                testFeature = std_scaler.transform(testFeature)
 
                 #training_feat = MinMaxScaler().fit_transform(training_feat)
                 #validation_feat = MinMaxScaler().fit_transform(validation_feat)            
